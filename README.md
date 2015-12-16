@@ -19,6 +19,21 @@ Simply add it to your Http interceptors. A Promise will be will be attached at e
 
 ```
 
+And in your application code add some service that handles pending requests,
+ideally with `$http.pendingRequests`:
+
+```
+function RequestHandler($http) {
+  this.cancelPending = function(){
+    angular.forEach($http.pendingRequests, function(request) {
+      if (request.cancel && request.timeout) {
+        request.cancel.resolve()
+      }
+    })
+  }
+}
+```
+
 
 
 # UMD

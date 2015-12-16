@@ -12,5 +12,6 @@ describe('HttpAttachPromiseInterceptor', function () {
   it('sets loadingRequest property', function () {
     request = HttpAttachPromiseInterceptor.request(request)
     expect( request ).to.have.property('timeout')
+    expect( request ).to.have.property('cancel')
   })
 })
