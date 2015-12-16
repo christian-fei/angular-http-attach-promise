@@ -1,11 +1,15 @@
 {
   "name": "angular-http-attach-promise",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "dist/angular-http-attach-promise.min.js",
   "scripts": {
     "test": "gulp test",
     "build": "gulp build"
+  },
+  "repository":{
+    "type": "git",
+    "url": "https://github.com/christian-fei/angular-http-attach-promise.git"
   },
   "author": "Christian",
   "license": "none",
